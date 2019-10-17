@@ -1,0 +1,11 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: Eureka-Client
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://kimi:123456@peer1:8080/eureka/,http://kimi:123456@peer2:8081/eureka/ #http://localhost:8080/eureka/
