@@ -1,0 +1,20 @@
+server:
+  port: 8081
+  context-path: /eureka #因为源码未更新,不加会导致不可用
+spring:
+  application:
+    name: Eureka-Server
+  security:
+    user:
+      name: kimi
+      password: 123456
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://kimi:123456@peer1:8080/eureka/
+  server:
+    enable-self-preservation: false

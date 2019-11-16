@@ -1,0 +1,12 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: Server-Consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://kimi:123456@peer1:8080/eureka/,http://kimi:123456@peer2:8081/eureka/
+feign:
+  hystrix:
+    enabled: true
