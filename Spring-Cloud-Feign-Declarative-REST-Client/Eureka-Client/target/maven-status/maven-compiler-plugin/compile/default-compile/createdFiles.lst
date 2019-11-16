@@ -1,0 +1,3 @@
+com\example\eurekaclient\domain\User.class
+com\example\eurekaclient\controller\UserController.class
+com\example\eurekaclient\EurekaClientApplication.class
