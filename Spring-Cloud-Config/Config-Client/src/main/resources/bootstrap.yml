@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: febs
+  cloud:
+    config:
+      username: kimi
+      password: 123456
+      profile: dev
+      label: test
+      #uri: http://localhost:12580
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://kimi:123456@peer1:8080/eureka/,http://kimi:123456@peer2:8081/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

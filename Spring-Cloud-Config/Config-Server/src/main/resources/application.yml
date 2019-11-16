@@ -1,0 +1,29 @@
+server:
+  port: 12580
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          # 配置git仓库地址
+          uri: https://github.com/JavaCodeMing/Spring-Cloud-Config.git
+          # 访问git仓库的用户名
+          username: JavaCodeMing
+          # 访问git仓库的用户密码
+          password: dzm331448293
+          # 配置仓库路径
+          search-paths: '{application}'
+          # 配置仓库的分支
+          #label:
+          clone-on-start: true
+  # 添加security后,在使用对称加密时出现权限问题
+  security:
+    user:
+      name: kimi
+      password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://kimi:123456@peer1:8080/eureka/,http://kimi:123456@peer2:8081/eureka/

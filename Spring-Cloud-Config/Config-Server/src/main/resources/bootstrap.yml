@@ -1,0 +1,8 @@
+# 加密用的密钥
+#encrypt:
+  #key: hello
+  #key-store:
+  #  location: classpath:/config-server.keystore
+  #  alias: config-server
+  #  password: 123456
+  #  secret: 123456
