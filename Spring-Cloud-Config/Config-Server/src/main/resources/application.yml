@@ -10,9 +10,9 @@ spring:
           # 配置git仓库地址
           uri: https://github.com/JavaCodeMing/Spring-Cloud-Config.git
           # 访问git仓库的用户名
-          username: JavaCodeMing
+          username: xxx
           # 访问git仓库的用户密码
-          password: dzm331448293
+          password: xxx
           # 配置仓库路径
           search-paths: '{application}'
           # 配置仓库的分支
