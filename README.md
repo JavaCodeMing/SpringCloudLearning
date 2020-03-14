@@ -1,5 +1,5 @@
 # SpringCloudLearning
-基于Spring Boot 2.1.9和Spring Cloud Greenwich.SR3，并将随官方版本持续更新......
+基于Spring Boot 2.1.9和Spring Cloud Greenwich.SR3，并将随官方版本持续更新......   
 (最近在重新做一版,基于Spring Boot 2.2.5、Spring Cloud Hoxton.SR3和Spring Cloud Alibaba 2.2.0,且包含Spring Cloud常用的所有组件...)
 
 1.[Spring Cloud Eureka服务治理](https://github.com/JavaCodeMing/SpringCloudLearning/blob/master/Spring-Cloud-Eureka-Server-Discovery/SpringCloudEureka%E6%9C%8D%E5%8A%A1%E6%B2%BB%E7%90%86.md)   
