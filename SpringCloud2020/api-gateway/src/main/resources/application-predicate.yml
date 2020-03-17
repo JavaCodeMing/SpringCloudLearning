@@ -1,0 +1,12 @@
+server:
+  port: 8704
+service-url:
+  user-service: http://localhost:8201
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: remoteaddr_route
+          uri: ${service-url.user-service}
+          predicates:
+            - RemoteAddr=192.168.43.177/24

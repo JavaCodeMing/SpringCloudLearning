@@ -1,0 +1,25 @@
+server:
+  port: 8301
+spring:
+  application:
+    name: ribbon-service
+  zipkin:
+    base-url: http://localhost:9411
+    # 关闭服务发现,否则Spring Cloud会把zipkin的url当做服务名称
+    discoveryClientEnabled: false
+    sender:
+      # 设置使用http的方式传输数据
+      type: web
+  sleuth:
+    sampler:
+      #设置Sleuth的抽样收集概率
+      probability: 1
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+service-url:
+  #地址中的"user-service"表示注册中心的服务名
+  user-service: http://user-service

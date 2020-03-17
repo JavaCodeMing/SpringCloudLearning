@@ -1,0 +1,25 @@
+server:
+  port: 8903
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      #启用环境名称
+      profile: dev
+      #分支名称
+      label: test
+      #配置文件名称
+      name: febs
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh'
