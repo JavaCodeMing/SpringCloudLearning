@@ -1,0 +1,25 @@
+server:
+  port: 8901
+spring:
+  application:
+    name: config-client
+  cloud:
+    #Config客户端配置
+    config:
+      #启用配置后缀名称
+      profile: dev
+      #分支名称
+      label: test
+      #配置中心地址即服务端地址
+      uri: http://localhost:8801
+      #配置文件名称(application:代表应用名称)
+      name: febs
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh'

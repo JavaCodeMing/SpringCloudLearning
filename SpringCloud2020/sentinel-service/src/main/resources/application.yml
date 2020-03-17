@@ -1,0 +1,35 @@
+server:
+  port: 8403
+spring:
+  application:
+    name: sentinel-service
+  cloud:
+    nacos:
+      discovery:
+        #配置Nacos地址
+        server-addr: localhost:8848
+    sentinel:
+      transport:
+        #配置sentinel dashboard地址
+        dashboard: localhost:8080
+        #sentinel启动端口
+        port: 8719
+      datasource:
+        ds1:
+          nacos:
+            server-addr: localhost:8848
+            dataId: ${spring.application.name}-sentinel
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+feign:
+  sentinel:
+    #打开sentinel对feign的支持
+    enabled: true
+service-url:
+  user-service: http://nacos-user-service
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

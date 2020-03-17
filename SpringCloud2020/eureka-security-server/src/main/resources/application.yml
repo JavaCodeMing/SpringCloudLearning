@@ -1,0 +1,19 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: eureka-security-server
+  security:
+    #配置SpringSecurity登录用户名和密码
+    user:
+      name: conan
+      password: 123456
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+  server:
+    #自我保护开关
+    enable-self-preservation: false

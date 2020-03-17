@@ -1,0 +1,19 @@
+server:
+  #指定运行端口
+  port: 8001
+spring:
+  application:
+    #指定服务名称
+    name: eureka-server
+eureka:
+  instance:
+    #指定主机地址
+    hostname: localhost
+  client:
+    #指定是否要从注册中心获取服务(注册中心不需要开启)(fetch:拿取)
+    fetch-registry: false
+      #指定是否要注册到注册中心(注册中心不需要开启)
+    register-with-eureka: false
+  server:
+    #关闭保护模式(一旦心跳检测超时则立即中注册中心中剔除对应的服务)
+    enable-self-preservation: false

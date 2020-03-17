@@ -1,0 +1,8 @@
+server:
+  port: 9102
+spring:
+  application:
+    name: oauth2-jwt-server
+  redis:
+    host: localhost
+    port: 6379
